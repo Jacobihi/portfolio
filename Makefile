@@ -1,8 +1,8 @@
 # You can set these variables from the command line.
-SPHINXOPTS    = -c ./docs
+SPHINXOPTS    = -c ./docs_conf
 SPHINXBUILD   = sphinx-build
 SOURCEDIR     = .
-BUILDDIR      = _published_docs
+BUILDDIR      = docs
 
 
 # Put it first so that "make" without argument is like "make help".
