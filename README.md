@@ -48,11 +48,11 @@ In higher ed it is particularly critical to protect student data and FERPA has s
 We incorporated some statistical distributions so we could shape demo and test data to support specific narratives in our live demo site.
 
 *Example Screenshots of Fabricated Data in GoodData*
-![Weekly Enrollment Funnel CRM Data](screenshots/Weekly Enrollment Funnel CRM Data.png)
+![Weekly Enrollment Funnel CRM Data](docs/_images/Weekly Enrollment Funnel CRM Data.png)
 
-![Advancement constituent Geographic Data](screenshots/Advancement Constituent Geographic Data.png)
+![Advancement constituent Geographic Data](docs/_images/Advancement Constituent Geographic Data.png)
 
-![Advancement constituent Geographic Data](screenshots/Advancement Donor Gift Data.png)
+![Advancement constituent Geographic Data](docs/_images/Advancement Donor Gift Data.png)
 
 ## 5. Connector Code
 
