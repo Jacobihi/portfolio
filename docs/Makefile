@@ -2,7 +2,7 @@
 SPHINXOPTS    = -c .
 SPHINXBUILD   = sphinx-build
 SOURCEDIR     = ../
-BUILDDIR      = .
+BUILDDIR      = ./
 
 
 # Put it first so that "make" without argument is like "make help".
@@ -16,7 +16,9 @@ html:
 	@$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 clean:
-	rm -r "$(BUILDDIR)"
+	rm -r "$(BUILDDIR)"/*.html "$(BUILDDIR)"/*.inv "$(BUILDDIR)"/*.js  "$(BUILDDIR)"/.doctrees "$(BUILDDIR)"/.doctrees \
+	"$(BUILDDIR)"/_sources "$(BUILDDIR)"/_static && rm "$(BUILDDIR)"/.buildinfo
+
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
