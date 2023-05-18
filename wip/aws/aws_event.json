@@ -1,0 +1,6 @@
+{
+  "s3_path": "s3://{BUCKET}/input/Online Retail.csv",
+      "file_kwargs": {
+        "header": true
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "input": {
+        "bucket": "jacobhickson-test",
+        "key": "input/Online Retail.csv"
+    },
+    "output": {
+        "bucket": "jacobhickson-test",
+        "key": "output/agg_retail.csv"
+    },
+    "groupby": "Country",
+    "agg": {
+        "Quantity": [
+            "min",
+            "max"
+        ]
+    }
+}

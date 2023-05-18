@@ -1,0 +1,3 @@
+google-cloud-bigquery [bqstorage,pandas]
+pandas-gbq
+apache-beam
