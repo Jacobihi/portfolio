@@ -50,7 +50,7 @@ def get_cli_parser() -> OptionParser:
     """
     Return the artisanal CLI option parser pre-loaded with all the parser options.
 
-    Options have to be maintained in :py:module:`parser_options`
+    Options have to be maintained in :py:mod:`parser_options`
     """
     parser = OptionParser(option_class=CLIOptions)
     for item in COMMA_SEPARATED_LISTS:

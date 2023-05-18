@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Command Line Interface &mdash; Jacob Hickson</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Jacob Hickson Portfolio" href="../README.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Jacob Hickson Portfolio
+          </a>
+              <div class="version">
+                0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../README.html">Jacob Hickson Portfolio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html#summary-of-proprietary-work-not-shown-here">Summary of Proprietary Work Not Shown Here</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Command Line Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cli.run_cli.run_cli"><code class="docutils literal notranslate"><span class="pre">run_cli()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cli.arg_parser.CLIOptions"><code class="docutils literal notranslate"><span class="pre">CLIOptions</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cli.arg_parser.get_cli_parser"><code class="docutils literal notranslate"><span class="pre">get_cli_parser()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cli.arg_parser.process_data"><code class="docutils literal notranslate"><span class="pre">process_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cli.parser_options.get_dict_from_parser"><code class="docutils literal notranslate"><span class="pre">get_dict_from_parser()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cli.approved_namespaces.ApprovedNamespace"><code class="docutils literal notranslate"><span class="pre">ApprovedNamespace</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cli.approved_namespaces.ApprovedNamespace.get_functions"><code class="docutils literal notranslate"><span class="pre">ApprovedNamespace.get_functions()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#cli.approved_namespaces.get_function_from_module"><code class="docutils literal notranslate"><span class="pre">get_function_from_module()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Jacob Hickson Portfolio</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Command Line Interface</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/cli/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="command-line-interface">
+<h1>Command Line Interface<a class="headerlink" href="#command-line-interface" title="Permalink to this heading"></a></h1>
+<p>The command line interface is a simple wrapper around the library optparse.</p>
+<p>In one deployment a similar tool was used for data team members to run ad-hoc jobs interacting with our warehouse and orchestration tools.</p>
+<p>I use sphinx as docs and gitlab pages for hosting internally, so I had pretty robust documentation for team members to use.</p>
+<p>I have re-written my own version of this tool for my portfolio.</p>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># make sure you are in portfolio</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>
+<span class="nb">source</span><span class="w"> </span>cli/aliases.sh
+cli<span class="w"> </span>--help
+</pre></div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># illustrative successful execution.</span>
+<span class="nv">file_path</span><span class="o">=</span>some/path.csv
+<span class="nv">table</span><span class="o">=</span>something
+<span class="nv">schema</span><span class="o">=</span>some_schema
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(portfolio)</span> <span class="go">user portfolio % cli db load_a_file_to_postgres --file_path &quot;${file_path}&quot; --table $table --schema $schema</span>
+<span class="go">[2023-05-17 23:18:22] - INFO: - creating postgres connector</span>
+<span class="go">[2023-05-17 23:18:22] - INFO: - Loading from some/path.csv into some_schema.table</span>
+<span class="go">[2023-05-17 23:18:22] - INFO: - 20 rows affected</span>
+<span class="gp gp-VirtualEnv">(portfolio)</span> <span class="go">user portfolio %</span>
+</pre></div>
+</div>
+<span class="target" id="module-cli.run_cli"></span><dl class="py function">
+<dt class="sig sig-object py" id="cli.run_cli.run_cli">
+<span class="sig-prename descclassname"><span class="pre">cli.run_cli.</span></span><span class="sig-name descname"><span class="pre">run_cli</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cli.run_cli.run_cli" title="Permalink to this definition"></a></dt>
+<dd><p>This is the main event for the Command Line Interface (CLI) module.</p>
+<p>Every command is structured <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">cli.py</span> <span class="pre">[namespace_directory]</span> <span class="pre">[function]</span></code>
+This CLI parser uses the optparse library to find the function within the namespace directory.</p>
+<p>If everyone follows setup correctly, they will have sourced cli/aliases.sh <code class="docutils literal notranslate"><span class="pre">alias</span> <span class="pre">cli=&quot;python</span>
+<span class="pre">cli/run_cli.py&quot;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">cli</span></code> is thus an alias for this function to run the command line interface.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will have to add options to <a class="reference internal" href="#module-cli.parser_options" title="cli.parser_options"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cli.parser_options</span></code></a></p>
+</div>
+<p>Use <code class="docutils literal notranslate"><span class="pre">help</span></code> or <code class="docutils literal notranslate"><span class="pre">options</span></code> after any command to learn about it!</p>
+</dd></dl>
+
+<span class="target" id="module-cli.arg_parser"></span><dl class="py class">
+<dt class="sig sig-object py" id="cli.arg_parser.CLIOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cli.arg_parser.</span></span><span class="sig-name descname"><span class="pre">CLIOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">opts</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">attrs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cli.arg_parser.CLIOptions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cli.arg_parser.get_cli_parser">
+<span class="sig-prename descclassname"><span class="pre">cli.arg_parser.</span></span><span class="sig-name descname"><span class="pre">get_cli_parser</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cli.arg_parser.get_cli_parser" title="Permalink to this definition"></a></dt>
+<dd><p>Return the artisanal CLI option parser pre-loaded with all the parser options.</p>
+<p>Options have to be maintained in <code class="xref py py-mod docutils literal notranslate"><span class="pre">parser_options</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><em>OptionParser</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cli.arg_parser.process_data">
+<span class="sig-prename descclassname"><span class="pre">cli.arg_parser.</span></span><span class="sig-name descname"><span class="pre">process_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cli.arg_parser.process_data" title="Permalink to this definition"></a></dt>
+<dd><p>Utility for parsing JSON data as an argument</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_file</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
+<li><p><strong>data</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
+<li><p><strong>params</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
+<li><p><strong>param_file</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-cli.parser_options"></span><dl class="py function">
+<dt class="sig sig-object py" id="cli.parser_options.get_dict_from_parser">
+<span class="sig-prename descclassname"><span class="pre">cli.parser_options.</span></span><span class="sig-name descname"><span class="pre">get_dict_from_parser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cli.parser_options.get_dict_from_parser" title="Permalink to this definition"></a></dt>
+<dd><p>This is the method I used to simplify the dict representation
+of the client opt parsing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>parser</strong> (<em>OptionParser</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-cli.approved_namespaces"></span><dl class="py class">
+<dt class="sig sig-object py" id="cli.approved_namespaces.ApprovedNamespace">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cli.approved_namespaces.</span></span><span class="sig-name descname"><span class="pre">ApprovedNamespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cli.approved_namespaces.ApprovedNamespace" title="Permalink to this definition"></a></dt>
+<dd><p>An approved namespace is an allow-listed namespace (i.e., directory/folder) that semantically groups modules containing functions .</p>
+<p>It simplifies the execution of  commands from the command line by grouping commands into semantic arguments.
+Then, each function can be retrieved without knowing the specific details of the command’s location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – </p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="cli.approved_namespaces.ApprovedNamespace.get_functions">
+<span class="sig-name descname"><span class="pre">get_functions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a_function</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cli.approved_namespaces.ApprovedNamespace.get_functions" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>a_function</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – an optional filter of a function name to retrieve. If not specified, all functions returned</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>either a function or a dict {“mod”: [functions]}</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cli.approved_namespaces.get_function_from_module">
+<span class="sig-prename descclassname"><span class="pre">cli.approved_namespaces.</span></span><span class="sig-name descname"><span class="pre">get_function_from_module</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a_namespace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a_function</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cli.approved_namespaces.get_function_from_module" title="Permalink to this definition"></a></dt>
+<dd><p>Given the namespace from the CLI and the function as arguments, find the namespace and then find the function within it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a_namespace</strong> (<em>str</em>) – </p></li>
+<li><p><strong>a_function</strong> (<em>str</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>callable</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../README.html" class="btn btn-neutral float-left" title="Jacob Hickson Portfolio" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
