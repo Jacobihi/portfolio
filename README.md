@@ -5,6 +5,8 @@ Much of my work to date has been on private repositories.
 This public repository is intended to provide a high-level overview of the kinds of projects I have worked on and the kinds I hope to work on in the future.
 The `develop` branch contains all the works-in-progress and this `main` branch is what I feel most confident in sharing.
 
+You can see my published docs at https://jacobhickson.github.io/portfolio/
+
 With time I will try to abstract some of the proprietary work I have done into public repositories.
 
 # Summary of Proprietary Work Not Shown Here
