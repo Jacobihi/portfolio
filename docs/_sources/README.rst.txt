@@ -5,14 +5,18 @@ Much of my work to date has been on private repositories.
 
 This public repository is intended to provide a high-level overview of
 the kinds of projects I have worked on and the kinds I hope to work on
-in the future. The ``develop`` branch contains all the works-in-progress
-and this ``main`` branch is what I feel most confident in sharing.
+in the future.
+
+The `develop branch <https://github.com/Jacobihi/portfolio/tree/develop>`_ contains works-in-progress.
+and this `main branch <https://github.com/Jacobihi/portfolio/tree/main>`_ is what I feel most confident in sharing.
+
+.. todo:Modify pages deployment using actions # https://github.com/marketplace/actions/sphinx-to-github-pages; trying not to git distracted by this.
 
 You can see my published docs at
 https://jacobhickson.github.io/portfolio/
 
-With time I will try to abstract some of the proprietary work I have
-done into public repositories.
+With time I will abstract more of the proprietary work I have
+done into this repo.
 
 Summary of Proprietary Work Not Shown Here
 ==========================================
@@ -71,18 +75,22 @@ masking in favor of fabrication.
 We incorporated some statistical distributions so we could shape demo
 and test data to support specific narratives in our live demo site.
 
-*Example Screenshots of Fabricated Data in GoodData* |Weekly Enrollment
-Funnel CRM Data|
+*Example Screenshots of Fabricated Data in GoodData*
+
+.. figure:: docs/_images/WeeklyEnrollmentFunnelCRMData.png
+   :alt: Weekly Enrollment Funnel CRM Data
+
+   Weekly Enrollment Funnel CRM Data
 
 .. figure:: docs/_images/AdvancementConstituentGeographicData.png
    :alt: Advancement constituent Geographic Data
 
-   Advancement constituent Geographic Data
+   Advancement Constituent Geographic Data
 
 .. figure:: docs/_images/AdvancementDonorGiftData.png
-   :alt: Advancement constituent Geographic Data
+   :alt: Advancement Donor Gift Data
 
-   Advancement constituent Geographic Data
+   Advancement Donor Gift Data
 
 5. Connector Code
 -----------------
@@ -90,5 +98,3 @@ Funnel CRM Data|
 I had extended our abstract Database + REST API connector code to
 support a variety of data sources, including postgres, Jira, Salesforce,
 and others.
-
-.. |Weekly Enrollment Funnel CRM Data| image:: docs/_images/WeeklyEnrollmentFunnelCRMData.png
