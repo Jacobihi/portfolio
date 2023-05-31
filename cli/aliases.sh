@@ -7,6 +7,7 @@ alias datagrip="open -a DataGrip.app"
 alias sublime="open -a 'Sublime Text.app'"
 alias excel="open -a 'Microsoft Excel.app'"
 alias firefox="open -a Firefox.app"
+alias chrome="open -a 'Google Chrome.app'"
 alias drawio="open -a draw.io.app"
 
 # misc
