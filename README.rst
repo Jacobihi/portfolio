@@ -13,7 +13,7 @@ and this `main branch <https://github.com/Jacobihi/portfolio/tree/main>`_ is wha
 .. todo:Modify pages deployment using actions # https://github.com/marketplace/actions/sphinx-to-github-pages; trying not to git distracted by this.
 
 You can see my published docs at
-https://jacobhickson.github.io/portfolio/
+https://jacobihi.github.io/portfolio/
 
 With time I will abstract more of the proprietary work I have
 done into this repo.
