@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Command Line Interface &mdash; Jacob Hickson</title>
@@ -12,9 +12,6 @@
   <![endif]-->
   
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -141,7 +138,7 @@ This CLI parser uses the optparse library to find the function within the namesp
 <dd><p>Return the artisanal CLI option parser pre-loaded with all the parser options.</p>
 <p>Options have to be maintained in <code class="xref py py-mod docutils literal notranslate"><span class="pre">parser_options</span></code></p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><em>OptionParser</em></p>
 </dd>
 </dl>
@@ -152,12 +149,12 @@ This CLI parser uses the optparse library to find the function within the namesp
 <span class="sig-prename descclassname"><span class="pre">cli.arg_parser.</span></span><span class="sig-name descname"><span class="pre">process_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cli.arg_parser.process_data" title="Permalink to this definition"></a></dt>
 <dd><p>Utility for parsing JSON data as an argument</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>data_file</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
-<li><p><strong>data</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
-<li><p><strong>params</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
-<li><p><strong>param_file</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
+<li><p><strong>data_file</strong> (<em>str</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>data</strong> (<em>str</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>params</strong> (<em>str</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>param_file</strong> (<em>str</em><em> | </em><em>None</em>) – </p></li>
 </ul>
 </dd>
 </dl>
@@ -169,7 +166,7 @@ This CLI parser uses the optparse library to find the function within the namesp
 <dd><p>This is the method I used to simplify the dict representation
 of the client opt parsing.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>parser</strong> (<em>OptionParser</em>) – </p>
 </dd>
 </dl>
@@ -182,7 +179,7 @@ of the client opt parsing.</p>
 <p>It simplifies the execution of  commands from the command line by grouping commands into semantic arguments.
 Then, each function can be retrieved without knowing the specific details of the command’s location.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – </p>
 </dd>
 </dl>
@@ -190,10 +187,10 @@ Then, each function can be retrieved without knowing the specific details of the
 <dt class="sig sig-object py" id="cli.approved_namespaces.ApprovedNamespace.get_functions">
 <span class="sig-name descname"><span class="pre">get_functions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a_function</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cli.approved_namespaces.ApprovedNamespace.get_functions" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>a_function</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – an optional filter of a function name to retrieve. If not specified, all functions returned</p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>a_function</strong> (<em>str</em><em> | </em><em>None</em>) – an optional filter of a function name to retrieve. If not specified, all functions returned</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>either a function or a dict {“mod”: [functions]}</p>
 </dd>
 </dl>
@@ -206,13 +203,13 @@ Then, each function can be retrieved without knowing the specific details of the
 <span class="sig-prename descclassname"><span class="pre">cli.approved_namespaces.</span></span><span class="sig-name descname"><span class="pre">get_function_from_module</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a_namespace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a_function</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cli.approved_namespaces.get_function_from_module" title="Permalink to this definition"></a></dt>
 <dd><p>Given the namespace from the CLI and the function as arguments, find the namespace and then find the function within it.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>a_namespace</strong> (<em>str</em>) – </p></li>
 <li><p><strong>a_function</strong> (<em>str</em>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>callable</p>
 </dd>
 </dl>
