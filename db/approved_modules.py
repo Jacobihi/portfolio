@@ -1,0 +1,3 @@
+CLI_MODULES = [
+    'jobs'
+]
