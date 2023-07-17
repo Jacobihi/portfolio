@@ -8,9 +8,10 @@ import cli.arg_parser
 
 ROOT_DIR = os.environ.get("ROOT_DIR")
 APPROVED_NAMESPACES = [
-    "db"  # simply for illustrative purposes
+    "db",
+    "utilities"
 ]
-pretty_names = '\n\t* '.join(
+pretty_names = '\n    * '.join(
     [f"{colors['yellow']}{n}{colors['reset']}" for n in APPROVED_NAMESPACES]
 )
 usage = f"""To run the command line interface (cli), invoke with {colors['red']}python cli.py{colors['reset']} 
