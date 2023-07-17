@@ -20,6 +20,8 @@ I have become accustomed to using ``pyenv`` to manage python versions on my mach
    exec "$SHELL"
 
    pyenv virtualenv $PYTHON_VERSION_TO_USE portfolio
+   export PYTHONPATH=$(pwd)
+
 
 .. code-block:: shell
 
