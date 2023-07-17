@@ -8,3 +8,4 @@ I am very docs-forward, so I wanted to ensure I included a sphinx doc in my port
 
    README.rst
    cli/index.rst
+   utilities/index.rst
