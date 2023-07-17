@@ -6,5 +6,6 @@ I am very docs-forward, so I wanted to ensure I included a sphinx doc in my port
 .. toctree::
    :caption: Table of Contents
 
-   README.md
+   README.rst
    cli/index.rst
+   utilities/index.rst
