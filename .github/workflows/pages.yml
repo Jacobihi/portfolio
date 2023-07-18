@@ -14,9 +14,9 @@ jobs:
         publish: false
         python_version: '3.9'
         sphinx_version: '4.0.3'
+        requirements_path: ./docs/requirements.txt
+        documentation_path: .
     - uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ${{ steps.deployment.outputs.artifact }}
-        requirements_path: ./docs/requirements.txt
-        documentation_path: ./
