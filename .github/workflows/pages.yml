@@ -16,8 +16,8 @@ jobs:
     - id: deployment
       shell: bash
       run: |
-        cd $GITHUB_PATH/docs
-        export PYTHONPATH=$GITHUB_PATH
+        cd $GITHUB_WORKSPACE/docs
+        export PYTHONPATH=$GITHUB_WORKSPACE
         pip3 install -r requirements.txt
         make html
         
