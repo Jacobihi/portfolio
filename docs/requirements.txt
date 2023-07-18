@@ -1,5 +1,5 @@
 black
-sphinx=4.0.3
+sphinx==4.0.3
 sphinx-tabs
 renku-sphinx-theme
 myst-parser
