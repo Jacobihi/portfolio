@@ -14,7 +14,7 @@ jobs:
       with:
         python-version: '3.9'
     - id: deployment
-      working-directory: $GITHUB_PATH/docs
+      working-directory: ${{ GITHUB_PATH }}/docs
       shell: bash
       run: |
         export PYTHONPATH=$GITHUB_PATH
