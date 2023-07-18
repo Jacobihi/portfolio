@@ -14,10 +14,11 @@ jobs:
       with:
         python-version: '3.9'
     - id: deployment
-      working-directory: docs
+#      working-directory: docs
       shell: bash
       run: |
         export PYTHONPATH=$GITHUB_WORKSPACE
+        cd docs
         pip3 install -r requirements.txt
         make html
         
