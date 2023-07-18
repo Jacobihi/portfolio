@@ -11,7 +11,6 @@ The `develop branch <https://github.com/Jacobihi/portfolio/tree/develop>`_ conta
 and this `main branch <https://github.com/Jacobihi/portfolio/tree/main>`_ is what I feel most confident in sharing.
 
 I have setup this page to be deployed using actions.
-.. todo:Modify pages deployment using actions # https://github.com/marketplace/actions/sphinx-to-github-pages; trying not to git distracted by this.
 
 You can see my published docs at
 https://jacobihi.github.io/portfolio/
