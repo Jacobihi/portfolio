@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Command Line Interface &mdash; Jacob Hickson</title>
@@ -12,11 +12,13 @@
   <![endif]-->
   
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Utilities" href="../utilities/index.html" />
     <link rel="prev" title="Jacob Hickson Portfolio" href="../README.html" /> 
 </head>
 
@@ -38,26 +40,15 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../README.html">Jacob Hickson Portfolio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../README.html#summary-of-proprietary-work-not-shown-here">Summary of Proprietary Work Not Shown Here</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Command Line Interface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#cli.run_cli.run_cli"><code class="docutils literal notranslate"><span class="pre">run_cli()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#cli.arg_parser.CLIOptions"><code class="docutils literal notranslate"><span class="pre">CLIOptions</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#cli.arg_parser.get_cli_parser"><code class="docutils literal notranslate"><span class="pre">get_cli_parser()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#cli.arg_parser.process_data"><code class="docutils literal notranslate"><span class="pre">process_data()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#cli.parser_options.get_dict_from_parser"><code class="docutils literal notranslate"><span class="pre">get_dict_from_parser()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#cli.approved_namespaces.ApprovedNamespace"><code class="docutils literal notranslate"><span class="pre">ApprovedNamespace</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#cli.approved_namespaces.ApprovedNamespace.get_functions"><code class="docutils literal notranslate"><span class="pre">ApprovedNamespace.get_functions()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#cli.approved_namespaces.get_function_from_module"><code class="docutils literal notranslate"><span class="pre">get_function_from_module()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../utilities/index.html">Utilities</a></li>
 </ul>
 
         </div>
@@ -85,13 +76,13 @@
            <div itemprop="articleBody">
              
   <section id="command-line-interface">
-<h1>Command Line Interface<a class="headerlink" href="#command-line-interface" title="Permalink to this heading"></a></h1>
+<h1>Command Line Interface<a class="headerlink" href="#command-line-interface" title="Permalink to this headline"></a></h1>
 <p>The command line interface is a simple wrapper around the library optparse.</p>
 <p>In one deployment a similar tool was used for data team members to run ad-hoc jobs interacting with our warehouse and orchestration tools.</p>
 <p>I use sphinx as docs and gitlab pages for hosting internally, so I had pretty robust documentation for team members to use.</p>
 <p>I have re-written my own version of this tool for my portfolio.</p>
 <section id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline"></a></h2>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># make sure you are in portfolio</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>
 <span class="nb">source</span><span class="w"> </span>cli/aliases.sh
@@ -129,7 +120,7 @@ This CLI parser uses the optparse library to find the function within the namesp
 
 <span class="target" id="module-cli.arg_parser"></span><dl class="py class">
 <dt class="sig sig-object py" id="cli.arg_parser.CLIOptions">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cli.arg_parser.</span></span><span class="sig-name descname"><span class="pre">CLIOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">opts</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">attrs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cli.arg_parser.CLIOptions" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">cli.arg_parser.</span></span><span class="sig-name descname"><span class="pre">CLIOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">opts</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">attrs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cli.arg_parser.CLIOptions" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
@@ -138,8 +129,8 @@ This CLI parser uses the optparse library to find the function within the namesp
 <dd><p>Return the artisanal CLI option parser pre-loaded with all the parser options.</p>
 <p>Options have to be maintained in <code class="xref py py-mod docutils literal notranslate"><span class="pre">parser_options</span></code></p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><em>OptionParser</em></p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>optparse.OptionParser</p>
 </dd>
 </dl>
 </dd></dl>
@@ -149,12 +140,12 @@ This CLI parser uses the optparse library to find the function within the namesp
 <span class="sig-prename descclassname"><span class="pre">cli.arg_parser.</span></span><span class="sig-name descname"><span class="pre">process_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cli.arg_parser.process_data" title="Permalink to this definition"></a></dt>
 <dd><p>Utility for parsing JSON data as an argument</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>data_file</strong> (<em>str</em><em> | </em><em>None</em>) – </p></li>
-<li><p><strong>data</strong> (<em>str</em><em> | </em><em>None</em>) – </p></li>
-<li><p><strong>params</strong> (<em>str</em><em> | </em><em>None</em>) – </p></li>
-<li><p><strong>param_file</strong> (<em>str</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>data_file</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
+<li><p><strong>data</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
+<li><p><strong>params</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
+<li><p><strong>param_file</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
 </ul>
 </dd>
 </dl>
@@ -166,20 +157,20 @@ This CLI parser uses the optparse library to find the function within the namesp
 <dd><p>This is the method I used to simplify the dict representation
 of the client opt parsing.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>parser</strong> (<em>OptionParser</em>) – </p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>parser</strong> (<em>optparse.OptionParser</em>) – </p>
 </dd>
 </dl>
 </dd></dl>
 
 <span class="target" id="module-cli.approved_namespaces"></span><dl class="py class">
 <dt class="sig sig-object py" id="cli.approved_namespaces.ApprovedNamespace">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cli.approved_namespaces.</span></span><span class="sig-name descname"><span class="pre">ApprovedNamespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cli.approved_namespaces.ApprovedNamespace" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">cli.approved_namespaces.</span></span><span class="sig-name descname"><span class="pre">ApprovedNamespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cli.approved_namespaces.ApprovedNamespace" title="Permalink to this definition"></a></dt>
 <dd><p>An approved namespace is an allow-listed namespace (i.e., directory/folder) that semantically groups modules containing functions .</p>
 <p>It simplifies the execution of  commands from the command line by grouping commands into semantic arguments.
 Then, each function can be retrieved without knowing the specific details of the command’s location.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – </p>
 </dd>
 </dl>
@@ -187,10 +178,10 @@ Then, each function can be retrieved without knowing the specific details of the
 <dt class="sig sig-object py" id="cli.approved_namespaces.ApprovedNamespace.get_functions">
 <span class="sig-name descname"><span class="pre">get_functions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a_function</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cli.approved_namespaces.ApprovedNamespace.get_functions" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>a_function</strong> (<em>str</em><em> | </em><em>None</em>) – an optional filter of a function name to retrieve. If not specified, all functions returned</p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>a_function</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – an optional filter of a function name to retrieve. If not specified, all functions returned</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>either a function or a dict {“mod”: [functions]}</p>
 </dd>
 </dl>
@@ -203,13 +194,13 @@ Then, each function can be retrieved without knowing the specific details of the
 <span class="sig-prename descclassname"><span class="pre">cli.approved_namespaces.</span></span><span class="sig-name descname"><span class="pre">get_function_from_module</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a_namespace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a_function</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cli.approved_namespaces.get_function_from_module" title="Permalink to this definition"></a></dt>
 <dd><p>Given the namespace from the CLI and the function as arguments, find the namespace and then find the function within it.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>a_namespace</strong> (<em>str</em>) – </p></li>
 <li><p><strong>a_function</strong> (<em>str</em>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>callable</p>
 </dd>
 </dl>
@@ -223,6 +214,7 @@ Then, each function can be retrieved without knowing the specific details of the
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../README.html" class="btn btn-neutral float-left" title="Jacob Hickson Portfolio" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../utilities/index.html" class="btn btn-neutral float-right" title="Utilities" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

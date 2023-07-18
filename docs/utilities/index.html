@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Utilities &mdash; Jacob Hickson</title>
@@ -12,8 +12,9 @@
   <![endif]-->
   
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -38,17 +39,12 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../README.html">Jacob Hickson Portfolio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../README.html#summary-of-proprietary-work-not-shown-here">Summary of Proprietary Work Not Shown Here</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cli/index.html">Command Line Interface</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Utilities</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#utilities.sql_writing.turn_csv_into_markdown_table"><code class="docutils literal notranslate"><span class="pre">turn_csv_into_markdown_table()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#utilities.sql_writing.turn_csv_into_select_from_values_statement"><code class="docutils literal notranslate"><span class="pre">turn_csv_into_select_from_values_statement()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#utilities.tables_to_csvs_from_html.write_webpage_tables_to_csv"><code class="docutils literal notranslate"><span class="pre">write_webpage_tables_to_csv()</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Utilities</a></li>
 </ul>
 
         </div>
@@ -76,7 +72,7 @@
            <div itemprop="articleBody">
              
   <section id="utilities">
-<h1>Utilities<a class="headerlink" href="#utilities" title="Permalink to this heading"></a></h1>
+<h1>Utilities<a class="headerlink" href="#utilities" title="Permalink to this headline"></a></h1>
 <p>Some utilities to demonstrate.</p>
 <span class="target" id="module-utilities.sql_writing"></span><p>This is a random collection of utilities that I have found useful in the past.</p>
 <dl class="py function">
@@ -103,10 +99,10 @@ cli<span class="w"> </span>utilities<span class="w">  </span>turn_csv_into_markd
 <p>The above is a Mac-based example in which you print the markdown to console, write to file,
 and copy to clipboard.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>file_path</strong> (<em>str</em>) – the CSV file path in question, by default we assume it’s named the table</p></li>
-<li><p><strong>output_file</strong> (<em>str</em><em> | </em><em>None</em>) – if you want to write the table to file you can do so</p></li>
+<li><p><strong>output_file</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – if you want to write the table to file you can do so</p></li>
 </ul>
 </dd>
 </dl>
@@ -140,12 +136,12 @@ cli<span class="w"> </span>utillities<span class="w">  </span>turn_csv_into_sele
 <p>The above is a Mac-based example in which you print the sql to console, write to file, and copy
 to clipboard.</p>
 <p>It would turn a csv like the following:</p>
-<table class="docutils align-default" id="id1">
+<table class="colwidths-given docutils align-default" id="id1">
 <caption><span class="caption-text">table_name.csv</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
 <colgroup>
-<col style="width: 20.0%" />
-<col style="width: 40.0%" />
-<col style="width: 40.0%" />
+<col style="width: 20%" />
+<col style="width: 40%" />
+<col style="width: 40%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>id</p></th>
@@ -179,36 +175,14 @@ to clipboard.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>file_path</strong> (<em>str</em>) – the CSV file path in question, by default we assume it’s named the table</p></li>
-<li><p><strong>table_name</strong> (<em>str</em><em> | </em><em>None</em>) – if different from your CSV file, the explicit table name to insert into</p></li>
-<li><p><strong>output_file</strong> (<em>str</em><em> | </em><em>None</em>) – if you want to write this SELECT statement to file, the output file
+<li><p><strong>table_name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – if different from your CSV file, the explicit table name to insert into</p></li>
+<li><p><strong>output_file</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – if you want to write this SELECT statement to file, the output file
 path</p></li>
 <li><p><strong>mode</strong> (<em>str</em>) – Defaults to <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> as in just select from values, but could be <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> to
 wrap the whole thing in INSERT INTO TABLE (columns) SELECT columns FROM values</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<span class="target" id="module-utilities.tables_to_csvs_from_html"></span><dl class="py function">
-<dt class="sig sig-object py" id="utilities.tables_to_csvs_from_html.write_webpage_tables_to_csv">
-<span class="sig-prename descclassname"><span class="pre">utilities.tables_to_csvs_from_html.</span></span><span class="sig-name descname"><span class="pre">write_webpage_tables_to_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destination_directory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">DEFAULT_DIRECTORY</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utilities.tables_to_csvs_from_html.write_webpage_tables_to_csv" title="Permalink to this definition"></a></dt>
-<dd><p>Given a URL or a file_path with HTML, write in the directory (defaults to downloads for Mac users)
-by parsing each table on the page into csv.</p>
-<p>Usage:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cli<span class="w"> </span>utilities<span class="w"> </span>write_webpage_tables_to_csv<span class="w"> </span><span class="se">\</span>
---url<span class="w"> </span><span class="s2">&quot;https://en.wikipedia.org/wiki/Slowly_changing_dimension&quot;</span>
-</pre></div>
-</div>
-<p>Results in 21 csv files in Downloads folder; one file per table in the doc.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>url</strong> (<em>str</em><em> | </em><em>None</em>) – </p></li>
-<li><p><strong>file_path</strong> (<em>str</em><em> | </em><em>None</em>) – </p></li>
-<li><p><strong>destination_directory</strong> (<em>str</em>) – </p></li>
 </ul>
 </dd>
 </dl>
