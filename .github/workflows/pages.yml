@@ -19,4 +19,4 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ${{ steps.deployment.outputs.artifact }}
         requirements_path: ./docs/requirements.txt
-        documentation_path: .
+        documentation_path: ./
